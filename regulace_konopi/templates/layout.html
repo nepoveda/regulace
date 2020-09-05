@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="cs">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ '/static/vendor/bootstrap/css/bootstrap.min.css'|url }}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="{{ '/static/vendor/fontawesome-free/css/all.min.css'|url }}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="{{ '/static/css/clean-blog.css'|url }}" rel="stylesheet">
+
+    <title>{% block title %}Welcome{% endblock %} — regulace_konopi</title>
+</head>
+
+<body>
+<header>
+    {% include  'navigation.html' %}
+</header>
+<div class="page">
+    {% block body %}{% endblock %}
+</div>
+<footer>
+    <!-- Bootstrap core JavaScript -->
+  <script src="{{ '/static/vendor/jquery/jquery.min.js'|url }}"></script>
+  <script src="{{ '/static/vendor/bootstrap/js/bootstrap.bundle.min.js'|url }}"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="{{ '/static/js/clean-blog.js'|url }}"></script>
+    &copy; Copyright 2020 by Dan Nepejchal.
+</footer>
+</body>
