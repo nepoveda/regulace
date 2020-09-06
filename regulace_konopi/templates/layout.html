@@ -1,8 +1,6 @@
 <!doctype html>
 <html lang="cs">
-
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -25,19 +23,22 @@
 </head>
 
 <body>
+
 <header>
     {% include  'navigation.html' %}
 </header>
+
 <div class="page">
     {% block body %}{% endblock %}
 </div>
-<footer>
-    <!-- Bootstrap core JavaScript -->
-  <script src="{{ '/static/vendor/jquery/jquery.min.js'|url }}"></script>
-  <script src="{{ '/static/vendor/bootstrap/js/bootstrap.bundle.min.js'|url }}"></script>
 
-  <!-- Custom scripts for this template -->
+<footer>
   <script src="{{ '/static/js/clean-blog.js'|url }}"></script>
     &copy; Copyright 2020 by Dan Nepejchal.
 </footer>
+
+<!-- Custom scripts for this template -->
+<script src="{{ '/static/vendor/jquery/jquery.min.js'|url }}"></script>
+<!-- Bootstrap core JavaScript -->
+<script src="{{ '/static/vendor/bootstrap/js/bootstrap.bundle.min.js'|url }}"></script>
 </body>

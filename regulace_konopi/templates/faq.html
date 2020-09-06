@@ -1,0 +1,305 @@
+{% extends "layout.html" %}
+{% from "macros/blog.html" import render_blog_post %}
+{% from "macros/pagination.html" import render_pagination %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="row center">
+            <h1 class="m-auto">FAQ</h1>
+            <div class="accordion w-100" id="accordionFaq">
+
+                <div class="card">
+                    <div class="card-header" id="question1">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                    data-target="#answer1" aria-expanded="true" aria-controls="answer1">
+                                1. Jaké jsou budoucí plány Pirátů nad rámec aktuálního návrhu?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="answer1" class="collapse" aria-labelledby="question1"
+                         data-parent="#accordionFaq">
+                        <div class="card-body">
+                            Už náš současný návrh je velké sousto, v budoucnu však chceme také řešit kontrolovanou
+                            dostupnost konopí i pro uživatele, kteří si jej nejsou schopní nebo ochotní pěstovat. Mimo
+                            konopnou tématiku je také záhodno začít uvažovat například o regulované legalizaci užití
+                            psychedelik pro účely výzkumu a léčby.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="question2">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                    data-target="#answer2" aria-expanded="true" aria-controls="answer2">
+                                2. Jak se v návrhu promítla připomínka týkající se absence možnosti bezúplatného sdílení
+                                konopí a konopných produktů?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="answer2" class="collapse" aria-labelledby="question2"
+                         data-parent="#accordionFaq">
+                        <div class="card-body">Do paragrafu 24c bylo přidáno ustanovení, které umožní bezúplatné předání
+                            až 30g konopné sušiny nebo 6g čistého THC jiné dospělé osobě.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="question3">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                    data-target="#answer3" aria-expanded="true" aria-controls="answer3">3. Jaký je
+                                postoj Pirátů ve věci případné registrace pěstitelů konopí?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="answer3" class="collapse" aria-labelledby="question3"
+                         data-parent="#accordionFaq">
+                        <div class="card-body">Registraci uživatelů jsme do zákona nezahrnuli. Pozměňovací návrh v tomto
+                            smyslu podpoříme jen tehdy, pokud nás navrhující strana přesvědčí relevantními faktickými
+                            argumenty.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="question4">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                    data-target="#answer4" aria-expanded="true" aria-controls="answer4">4.Jak ovlivní
+                                přijetí návrhu počet nelegálních dealerů a černý trh s konopím?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="answer4" class="collapse" aria-labelledby="question4"
+                         data-parent="#accordionFaq">
+                        <div class="card-body">Nezanedbatelná část uživatelů si konopí kupuje, protože nemají bezpečnou
+                            možnost samopěstování. Umožněním samopěstování začne odliv uživatelů z černého trhu směrem k
+                            samozásobení. S úbytkem zákazníků ubude i dealerů. Možnost bezúplatného sdílení konopí s
+                            jinou dospělou osobou bude znamenat další snížení poptávky po konopí na černém trhu.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="question5">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                    data-target="#answer5" aria-expanded="true" aria-controls="answer5">5. Jak ovlivní
+                                přijetí návrhu spotřebu konopí v ČR?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="answer5" class="collapse" aria-labelledby="question5"
+                         data-parent="#accordionFaq">
+                        <div class="card-body">Z údajů dostupných ze států, kde již konopí různými cestami regulovaně
+                            legalizovali, vyplývá, že změna legislativy v tomto směru neměla na spotřebu konopí výrazný
+                            vliv. Jediné, kde je vidět velký nárůst, je objem dat, která jsme schopni v legálním
+                            kontextu sbírat a analyzovat.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="question6">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                    data-target="#answer6" aria-expanded="true" aria-controls="answer6">6. Jaký je důvod
+                                navrhovaných limitů a jejich výše?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="answer6" class="collapse" aria-labelledby="question6"
+                         data-parent="#accordionFaq">
+                        <div class="card-body">Limity byly nastaveny tak, aby umožnily odchod z černého trhu co možná
+                            nejšírší skupině lidí, kteří konopí užívají pro osobní potřebu, ale zároveň dostatečně
+                            nízko, aby bylo jednoduše možné rozlišit ilegální velkopěstování konopí za účelem zisku a
+                            legální samopěstování.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="question7">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                    data-target="#answer7" aria-expanded="true" aria-controls="answer7">7. Jak se bude
+                                počítat či měřit dodržení limitů u konopných produktů?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="answer7" class="collapse" aria-labelledby="question7"
+                         data-parent="#accordionFaq">
+                        <div class="card-body">Stejně jako se kontrolují všechny věci, které mohou být ilegální navzdory
+                            tomu, že vypadají legálně (zbraně, lékárenské produkty, …) prostě k žádné kontrole
+                            nedochází, dokud policie nepojme důvodné podezření, že dochází k nezákonnému jednání. U
+                            konopných produktů by tedy muselo dojít ke kvantitativní chemické analýze a z ní by následně
+                            bylo zjištěno, jestli množství čistého THC, které daná osoba fakticky držela, nepřekročilo
+                            limit stanovený zákonem.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="question8">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                    data-target="#answer8" aria-expanded="true" aria-controls="answer8">8. Co by měl
+                                pěstitel udělat s případným konopím, které po sklizni přesáhlo povolený limit?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="answer8" class="collapse" aria-labelledby="question8"
+                         data-parent="#accordionFaq">
+                        <div class="card-body">Tato otázka by měla být vyřešena v prováděcí vyhlášce, kterou k zákonu
+                            napíše příslušné ministerstvo.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="question9">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                    data-target="#answer9" aria-expanded="true" aria-controls="answer9"> 9.Jak byla
+                                zohledněna připomínka, zda nejsou lepší limity na základě obsahu THC?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="answer9" class="collapse" aria-labelledby="question9"
+                         data-parent="#accordionFaq">
+                        <div class="card-body">Do zákona byl nad rámec limitu pro množství sušených konopných květů
+                            přidán také limit pro množství čistého THC ve výši 20% daného limitu pro sušinu. Návrh
+                            zákona bude vyžadovat dodržení obou těchto limitů zároveň.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="question10">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                    data-target="#answer10" aria-expanded="true" aria-controls="answer10">10. Jakým
+                                způsobem bude řešena otázka užívání u účastníků silničního provozu (zvláště řidičů
+                                motorových vozidel)?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="answer10" class="collapse" aria-labelledby="question10"
+                         data-parent="#accordionFaq">
+                        <div class="card-body">Účastník silničního provozu nesmí být „pod vlivem“. Testery používané v
+                            současnosti Policií ČR a ani krevní testy ve zdravotnickém zařízení nemají schopnost
+                            jednoznačně stanovit, zda je testovaná osoba skutečně pod vlivem. Proto je potřeba zahájit v
+                            ČR diskuzi na téma standardizovaných polních testů střízlivosti a dalších alternativ k
+                            současnému nedostačujícímu řešení, se kterými máme možnost se setkat v některých zemích, kde
+                            bylo konopí již legalizováno.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="question11">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                    data-target="#answer11" aria-expanded="true" aria-controls="answer11">11. Jak je
+                                míněno „zamezení volného přístupu třetích osob“ dle návrhu?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="answer11" class="collapse" aria-labelledby="question11"
+                         data-parent="#accordionFaq">
+                        <div class="card-body">Toto bude určitě řešeno v prováděcí vyhlášce, kterou připraví příslušné
+                            ministerstvo. Mohlo by se jednat o formu uzamykatelné schránky pro uchovávání konopí v
+                            obydlí tak, aby se k němu bez vědomí majitele nikdo nedostal. Při pěstování konopí venku by
+                            mohlo jít o důkladně oplocený pozemek. Opatření pro pěstování uvnitř by mělo být méně přísné
+                            než pro pěstování venku, ale konkrétní podobu nedokážeme předvídat. Budeme se nicméně
+                            snažit, aby konkrétní regulace způsobu pěstby nedosáhly tak olbřímí úrovně, jako je tomu v
+                            Kanadě – naše implementace by si měla zachovat liberální kontext.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="question12">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                    data-target="#answer12" aria-expanded="true" aria-controls="answer12">12. Jak a kde bude možno konopí a konopné produkty užívat?</button>
+                        </h2>
+                    </div>
+                    <div id="answer12" class="collapse" aria-labelledby="question12"
+                         data-parent="#accordionFaq">
+                        <div class="card-body">Užívání konopí a konopných produktů je v ČR legální. Celostátně se na něj bude vztahovat snad jen protikuřácký zákon, a to jen v případě užívání formou kouření. Další případné regulace v kontextu konzumace konopí (například v okolí škol) bychom chtěli ponechat na zastupitelstvech lokální úrovně. </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="question13">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                    data-target="#answer13" aria-expanded="true" aria-controls="answer13">13. Bude možno po přijetí návrhu delegovat pěstování na jinou osobu?</button>
+                        </h2>
+                    </div>
+                    <div id="answer13" class="collapse" aria-labelledby="question13"
+                         data-parent="#accordionFaq">
+                        <div class="card-body">S touto možností návrh zákona nepočítá. Pokud je někdo do té míry nemocný, že si konopí nemůže vypěstovat, bude potřeba, aby mu konopí bylo poskytnuto ékárnou na základě receptu. Alternativně může nemocným lidem konopí po 30g darovat spřízněný samopěstitel. </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="question14">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                    data-target="#answer14" aria-expanded="true" aria-controls="answer14">14. Bude možno transportovat najednou veškeré vypěstované konopí z pozemku, kde bylo vypěstováno do obydlí v případě, že se tato místa liší?</button>
+                        </h2>
+                    </div>
+                    <div id="answer14" class="collapse" aria-labelledby="question14"
+                         data-parent="#accordionFaq">
+                        <div class="card-body">Návrh zákona záměrně umožňuje transport konopí jedině po 30g najednou. Je-li toto pro daného samopěstitele příliš omezující, měl by pěstovat blíže k domovu (pronájem pozemku) nebo uvnitř vlastního obydlí (growbox s umělým osvětlením). </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="question15">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                    data-target="#answer15" aria-expanded="true" aria-controls="answer15">15. Bude nějak řešena distribuce semen s certifikací (včetně informací o původu a obsahu)?</button>
+                        </h2>
+                    </div>
+                    <div id="answer15" class="collapse" aria-labelledby="question15"
+                         data-parent="#accordionFaq">
+                        <div class="card-body">Dostupnost semen a informací o nich je v ČR dostatečná. Necítili jsme proto potřebu je v návrhu zákona jakkoliv řešit. </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="question16">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                    data-target="#answer16" aria-expanded="true" aria-controls="answer16">16. Bude zakázáno pěstovat konopí rodinám s nezletilými dětmi?</button>
+                        </h2>
+                    </div>
+                    <div id="answer16" class="collapse" aria-labelledby="question16"
+                         data-parent="#accordionFaq">
+                        <div class="card-body">Takovou ambici návrh zákona nemá. Samopěstitelé mají pouze povinnost zamezit dětem v přístupu k pěstovanému či skladovanému konopí. </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="question17">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                    data-target="#answer17" aria-expanded="true" aria-controls="answer17">17. Dotýká se nějak návrh technického konopí nebo výrobků z konopí neobsahujících THC?</button>
+                        </h2>
+                    </div>
+                    <div id="answer17" class="collapse" aria-labelledby="question17"
+                         data-parent="#accordionFaq">
+                        <div class="card-body">Technického konopí ani zmíněných výrobků se návrh zákona nedotýká. </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
